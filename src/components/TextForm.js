@@ -38,11 +38,11 @@ export default function TextForm(props) {
           <div className="mb-3">
           <textarea className="form-control" id="myBox" value={text} onChange={handleOnChange} rows="8"></textarea>
           </div>
-          <button className='btn btn-primary mx-2' onClick={handleUpClick}>Convert to Uppercase</button>
-          <button className='btn btn-primary mx-2' onClick={handleLoClick}>Convert to Lowercase</button>
-          <button className='btn btn-primary mx-2' onClick={handleClearClick}>Clear text</button>
-          <button className='btn btn-primary mx-2' onClick={handleSpacesClick}>Remove extra spaces</button>
-          <button className='btn btn-primary mx-2' onClick={handleCapitalizeClick}>Capitalize the first letter of word</button>    
+          <button className='btn btn-primary mx-2 my-2' disabled={text.length===0} onClick={handleUpClick}>Convert to Uppercase</button>
+          <button className='btn btn-primary mx-2 my-2' disabled={text.length===0} onClick={handleLoClick}>Convert to Lowercase</button>
+          <button className='btn btn-primary mx-2 my-2' disabled={text.length===0} onClick={handleClearClick}>Clear text</button>
+          <button className='btn btn-primary mx-2 my-2' disabled={text.length===0} onClick={handleSpacesClick}>Remove extra spaces</button>
+          <button className='btn btn-primary mx-2 my-2' disabled={text.length===0} onClick={handleCapitalizeClick}>Capitalize the first letter of word</button>    
       </div>
       <div className='container my-3'>
         <h1>Your text summary</h1>
